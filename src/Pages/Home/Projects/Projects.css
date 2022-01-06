@@ -1,0 +1,54 @@
+.project-card {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  color: #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.project-card > img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+.project-card .text-box {
+  background-color: #272727ad;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.project-card,
+.project-card:before,
+.project-card:after,
+.project-card *,
+.project-card *:before,
+.project-card *:after {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+
+/** fade **/
+.project-card .text-box {
+  opacity: 0;
+}
+
+.project-card:hover .text-box {
+  opacity: 1;
+}
+
+.project-card:hover > img,
+.project-card:hover .text-box {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
